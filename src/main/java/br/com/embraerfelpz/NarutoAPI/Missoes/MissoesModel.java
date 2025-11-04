@@ -3,6 +3,8 @@ package br.com.embraerfelpz.NarutoAPI.Missoes;
 import br.com.embraerfelpz.NarutoAPI.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "tb_missoes")
 public class MissoesModel {
@@ -13,6 +15,8 @@ public class MissoesModel {
     private String nome;
     private String dificuldade;
 
-    private NinjaModel ninja;
+    //Uma missão pode ter vários ninjas
+    @OneToMany(mappedBy = "missoes")
+    private List<NinjaModel> ninjas;
 
 }
