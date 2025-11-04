@@ -1,6 +1,8 @@
-package br.com.embraerfelpz.NarutoAPI;
+package br.com.embraerfelpz.NarutoAPI.Ninjas;
 
+import br.com.embraerfelpz.NarutoAPI.Missoes.MissoesModel;
 import jakarta.persistence.*;
+import java.util.List;
 
 // Class -> DB
 @Entity
@@ -13,6 +15,7 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+    private List<MissoesModel> missoes;
 
     public NinjaModel() {}
 
