@@ -20,7 +20,9 @@ public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "nome_ninja")
     private String nome;
+    @Column(unique = true)
     private String email;
     private int idade;
 
